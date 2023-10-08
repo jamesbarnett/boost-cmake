@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 NDK_VER=android-ndk-r18b
 
@@ -31,8 +31,8 @@ build_install() {
     if [[ "$AGENT_OS" == "Linux" ]]; then
         sudo apt-get install \
             build-essential \
-            g++-5 \
-            clang-6.0 \
+            g++-12 \
+            clang-15 \
             aria2 \
             ninja-build \
             ccache
@@ -56,16 +56,16 @@ build_install() {
 }
 
 build_script() {
-    mkdir build
+    [[ -d build ]] || mkdir build
     pushd build
 
     if [[ "$BUILD_TARGET" == "Linux" ]]; then
         if [[ "$BUILD_COMPILER" == "GCC" ]]; then
-            CC=gcc-5
-            CXX=g++-5
+            CC=gcc-12
+            CXX=g++-12
         else
-            CC=clang-6.0
-            CXX=clang++-6.0
+            CC=clang-15
+            CXX=clang++-15
         fi
         cmake .. -GNinja \
                  -DCMAKE_C_COMPILER=$CC \
