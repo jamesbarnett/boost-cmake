@@ -1,5 +1,4 @@
 # Boost CMake [![Build Status](https://dev.azure.com/Orphis/boost-cmake/_apis/build/status/Orphis.boost-cmake?branchName=master)](https://dev.azure.com/Orphis/boost-cmake/_build/latest?definitionId=1?branchName=master)
-
 ## Synopsis
 
 Easy Boost integration in CMake projects!
@@ -8,7 +7,7 @@ Easy Boost integration in CMake projects!
 
 Install the submodule in your project structure:
 ```
-git submodule add https://github.com/Orphis/boost-cmake.git
+git submodule add https://github.com/jamesbarnett/boost-cmake.git
 ```
 Use it! In your CMakeLists.txt file:
 
